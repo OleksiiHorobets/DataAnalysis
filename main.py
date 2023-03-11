@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 import sqlalchemy
 from sqlalchemy import text
@@ -51,10 +52,108 @@ def load_to_stage():
 
 
 def transform():
-    hosts_query = "SELECT * FROM "
+    hosts_raw = transform_hosts()
+    listings_raw = transform_listings()
 
-    hosts = pd.read_sql()
-    pass
+    # print(listings_raw)
+
+
+def transform_hosts():
+    hosts_query = text("""
+                SELECT listing_id, host_id, host_name,host_since, host_location,host_about,host_response_time,
+                    host_response_rate, host_acceptance_rate, host_is_superhost, host_neighbourhood, host_listings_count,
+                    host_total_listings_count, host_has_profile_pic, host_identity_verified
+                FROM airbnb_stage.HostsStage
+        """)
+
+    hosts = pd.read_sql(hosts_query, engine.connect())
+    return hosts
+
+
+def transform_listings():
+    listings_query = text("""
+                SELECT id, listing_url, scrape_id, last_scraped, name, summary,
+                space, description, experiences_offered, neighborhood_overview,
+                notes, transit, thumbnail_url, medium_url, picture_url,
+                xl_picture_url, street, neighbourhood, neighbourhood_cleansed,
+                neighbourhood_group_cleansed, city, state, zipcode, market,
+                smart_location, country_code, country, latitude, longitude,
+                is_location_exact, property_type, room_type, accommodates,
+                bathrooms, bedrooms, beds, bed_type, amenities, square_feet,
+                price, weekly_price, monthly_price, security_deposit,
+                cleaning_fee, guests_included, extra_people, minimum_nights,
+                maximum_nights, calendar_updated, has_availability,
+                availability_30, availability_60, availability_90,
+                availability_365, calendar_last_scraped, number_of_reviews,
+                first_review, last_review, review_scores_rating,
+                review_scores_accuracy, review_scores_cleanliness,
+                review_scores_checkin, review_scores_communication,
+                review_scores_location, review_scores_value, requires_license,
+                license, jurisdiction_names, instant_bookable,
+                cancellation_policy, require_guest_profile_picture,
+                require_guest_phone_verification, calculated_host_listings_count,
+                reviews_per_month
+                FROM airbnb_stage.ListingStage
+        """)
+
+    listings = pd.read_sql(listings_query, engine.connect())
+
+    dim_apartment = transform_dim_apartment(listings)
+
+    # dim_price = hosts.loc[:, '']
+
+    return dim_apartment
+
+
+def transform_dim_apartment(listings: pd.DataFrame):
+    dim_apartment_raw = listings.loc[:, ['property_type', 'room_type', 'accommodates',
+                                         'bathrooms', 'bedrooms', 'beds',
+                                         'bed_type', 'square_feet']]
+
+    dim_apartment_raw['id'] = np.arange(len(dim_apartment_raw)) + 1
+    dim_apartment_raw.set_index('id', inplace=True)
+
+    # print(dim_apartment_raw)
+
+
+
+    with engine.connect() as conn:
+        query =text( """use Airbnb;
+            DROP TABLE IF EXISTS DimApartment;
+            CREATE TABLE airbnb.DimApartment
+            (
+                id bigint,
+                property_type VARCHAR(30),
+                room_type VARCHAR(30),
+                accommodates int,
+                bathrooms int,
+                bedrooms int,
+                beds int,
+                bed_type VARCHAR(30),
+                square_feet float
+            
+                CONSTRAINT PK_DimApartment PRIMARY KEY (id)
+            );""")
+        conn.execute(query)
+
+        query = "INSERT INTO airbnb.DimApartment (id, property_type ,room_type, accommodates, bathrooms, bedrooms, beds, bed_type, square_feet)  VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+
+        dim_apartment_raw.to_sql(name="DimApartment", con=engine, if_exists='append',
+                                 schema='airbnb',
+                                 # dtype={
+                                 #     'id': sqlalchemy.BIGINT,
+                                 #     'property_type': sqlalchemy.VARCHAR(length=30),
+                                 #     'room_type': sqlalchemy.VARCHAR(length=30),
+                                 #     'accommodates': sqlalchemy.INTEGER(),
+                                 #     'bathrooms': sqlalchemy.NVARCHAR(length=200),
+                                 #     'bedrooms': sqlalchemy.INTEGER,
+                                 #     'beds': sqlalchemy.INTEGER,
+                                 #     'bed_type': sqlalchemy.VARCHAR(length=50),
+                                 #     'square_feet': sqlalchemy.FLOAT()
+                                 # }
+                                 )
+
+    return dim_apartment_raw
 
 
 def load():
@@ -62,8 +161,8 @@ def load():
 
 
 def run():
-    load_to_stage()
-    # transform()
+    # load_to_stage()
+    transform()
     load()
 
     engine.dispose()
@@ -85,8 +184,7 @@ def split():
         'id', 'listing_url', 'scrape_id', 'last_scraped', 'name', 'summary',
         'space', 'description', 'experiences_offered', 'neighborhood_overview',
         'notes', 'transit', 'thumbnail_url', 'medium_url', 'picture_url',
-        'xl_picture_url',
-        'street', 'neighbourhood', 'neighbourhood_cleansed',
+        'xl_picture_url', 'street', 'neighbourhood', 'neighbourhood_cleansed',
         'neighbourhood_group_cleansed', 'city', 'state', 'zipcode', 'market',
         'smart_location', 'country_code', 'country', 'latitude', 'longitude',
         'is_location_exact', 'property_type', 'room_type', 'accommodates',

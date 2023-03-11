@@ -16566,7 +16566,7 @@
     </collation>
     <database id="5510" parent="1" name="Airbnb">
       <Current>1</Current>
-      <Fingerprint>7.44992/37536492-F8D3-4A08-8698-E46B76A0C491@DESKTOP-FMHR02K</Fingerprint>
+      <Fingerprint>7.44993/F0168299-D333-457D-B56B-726003AD839F@DESKTOP-FMHR02K</Fingerprint>
       <Grants>7|database||1|connect|G
 7|database||0|view any column encryption key definition|G
 7|database||0|view any column master key definition|G</Grants>
@@ -16587,7 +16587,16 @@
       <CollationName>Cyrillic_General_CI_AS</CollationName>
     </database>
     <database id="5514" parent="1" name="master">
+      <Fingerprint>1.37717/00000000-0000-0000-0000-000000000000@DESKTOP-FMHR02K</Fingerprint>
+      <Grants>1|database||1|connect|G
+1|database||2|connect|G
+1|database||5|connect|G
+1|database||6|connect|G
+1|database||6|execute|G
+1|database||0|view any column encryption key definition|G
+1|database||0|view any column master key definition|G</Grants>
       <ObjectId>1</ObjectId>
+      <PermissionsCheckSum>7998723517</PermissionsCheckSum>
       <CollationName>Cyrillic_General_CI_AS</CollationName>
     </database>
     <database id="5515" parent="1" name="model">
@@ -16758,128 +16767,599 @@
       <Enabled>1</Enabled>
       <ObjectId>276</ObjectId>
     </login>
-    <role id="5547" parent="5510" name="public">
+    <role id="5547" parent="5510" name="INFORMATION_SCHEMA">
       <AuthType>none</AuthType>
-      <ObjectId>0</ObjectId>
+      <ObjectId>3</ObjectId>
+    </role>
+    <role id="5548" parent="5510" name="db_accessadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16385</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5548" parent="5510" name="dbo">
+    <role id="5549" parent="5510" name="db_backupoperator">
+      <AuthType>none</AuthType>
+      <ObjectId>16389</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5550" parent="5510" name="db_datareader">
+      <AuthType>none</AuthType>
+      <ObjectId>16390</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5551" parent="5510" name="db_datawriter">
+      <AuthType>none</AuthType>
+      <ObjectId>16391</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5552" parent="5510" name="db_ddladmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16387</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5553" parent="5510" name="db_denydatareader">
+      <AuthType>none</AuthType>
+      <ObjectId>16392</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5554" parent="5510" name="db_denydatawriter">
+      <AuthType>none</AuthType>
+      <ObjectId>16393</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5555" parent="5510" name="db_owner">
+      <AuthType>none</AuthType>
+      <ObjectId>16384</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5556" parent="5510" name="db_securityadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16386</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5557" parent="5510" name="dbo">
       <AuthType>windows</AuthType>
       <DefaultSchema>dbo</DefaultSchema>
       <ObjectId>1</ObjectId>
       <Type>windows-user</Type>
     </role>
-    <role id="5549" parent="5510" name="guest">
+    <role id="5558" parent="5510" name="guest">
       <AuthType>none</AuthType>
       <DefaultSchema>guest</DefaultSchema>
       <ObjectId>2</ObjectId>
     </role>
-    <role id="5550" parent="5510" name="INFORMATION_SCHEMA">
+    <role id="5559" parent="5510" name="public">
       <AuthType>none</AuthType>
-      <ObjectId>3</ObjectId>
+      <ObjectId>0</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
     </role>
-    <role id="5551" parent="5510" name="sys">
+    <role id="5560" parent="5510" name="sys">
       <AuthType>none</AuthType>
       <ObjectId>4</ObjectId>
-    </role>
-    <role id="5552" parent="5510" name="db_owner">
-      <AuthType>none</AuthType>
-      <ObjectId>16384</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5553" parent="5510" name="db_accessadmin">
-      <AuthType>none</AuthType>
-      <ObjectId>16385</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5554" parent="5510" name="db_securityadmin">
-      <AuthType>none</AuthType>
-      <ObjectId>16386</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5555" parent="5510" name="db_ddladmin">
-      <AuthType>none</AuthType>
-      <ObjectId>16387</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5556" parent="5510" name="db_backupoperator">
-      <AuthType>none</AuthType>
-      <ObjectId>16389</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5557" parent="5510" name="db_datareader">
-      <AuthType>none</AuthType>
-      <ObjectId>16390</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5558" parent="5510" name="db_datawriter">
-      <AuthType>none</AuthType>
-      <ObjectId>16391</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5559" parent="5510" name="db_denydatareader">
-      <AuthType>none</AuthType>
-      <ObjectId>16392</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5560" parent="5510" name="db_denydatawriter">
-      <AuthType>none</AuthType>
-      <ObjectId>16393</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
     </role>
     <schema id="5561" parent="5510" name="INFORMATION_SCHEMA">
       <ObjectId>3</ObjectId>
     </schema>
-    <schema id="5562" parent="5510" name="airbnb_stage">
+    <schema id="5562" parent="5510" name="airbnb">
+      <IntrospectionTimestamp>2023-03-11.23:32:16.217</IntrospectionTimestamp>
+      <ObjectId>6</ObjectId>
+    </schema>
+    <schema id="5563" parent="5510" name="airbnb_stage">
+      <IntrospectionTimestamp>2023-03-11.23:29:25.920</IntrospectionTimestamp>
       <ObjectId>5</ObjectId>
     </schema>
-    <schema id="5563" parent="5510" name="db_accessadmin">
+    <schema id="5564" parent="5510" name="db_accessadmin">
       <ObjectId>16385</ObjectId>
     </schema>
-    <schema id="5564" parent="5510" name="db_backupoperator">
+    <schema id="5565" parent="5510" name="db_backupoperator">
       <ObjectId>16389</ObjectId>
     </schema>
-    <schema id="5565" parent="5510" name="db_datareader">
+    <schema id="5566" parent="5510" name="db_datareader">
       <ObjectId>16390</ObjectId>
     </schema>
-    <schema id="5566" parent="5510" name="db_datawriter">
+    <schema id="5567" parent="5510" name="db_datawriter">
       <ObjectId>16391</ObjectId>
     </schema>
-    <schema id="5567" parent="5510" name="db_ddladmin">
+    <schema id="5568" parent="5510" name="db_ddladmin">
       <ObjectId>16387</ObjectId>
     </schema>
-    <schema id="5568" parent="5510" name="db_denydatareader">
+    <schema id="5569" parent="5510" name="db_denydatareader">
       <ObjectId>16392</ObjectId>
     </schema>
-    <schema id="5569" parent="5510" name="db_denydatawriter">
+    <schema id="5570" parent="5510" name="db_denydatawriter">
       <ObjectId>16393</ObjectId>
     </schema>
-    <schema id="5570" parent="5510" name="db_owner">
+    <schema id="5571" parent="5510" name="db_owner">
       <ObjectId>16384</ObjectId>
     </schema>
-    <schema id="5571" parent="5510" name="db_securityadmin">
+    <schema id="5572" parent="5510" name="db_securityadmin">
       <ObjectId>16386</ObjectId>
     </schema>
-    <schema id="5572" parent="5510" name="dbo">
+    <schema id="5573" parent="5510" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-03-09.18:50:06.260</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-03-11.23:29:25.940</IntrospectionTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
-    <schema id="5573" parent="5510" name="guest">
+    <schema id="5574" parent="5510" name="guest">
       <ObjectId>2</ObjectId>
     </schema>
-    <schema id="5574" parent="5510" name="sys">
+    <schema id="5575" parent="5510" name="sys">
       <ObjectId>4</ObjectId>
     </schema>
+    <table id="5576" parent="5562" name="DimApartment">
+      <CreatedTimestamp>2023-03-11.23:28:39.940</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-11.23:28:39.940</ModifiedTimestamp>
+      <ObjectId>1765581328</ObjectId>
+    </table>
+    <table id="5577" parent="5563" name="HostsStage">
+      <CreatedTimestamp>2023-03-09.23:28:10.053</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-09.23:28:10.053</ModifiedTimestamp>
+      <ObjectId>1077578877</ObjectId>
+    </table>
+    <table id="5578" parent="5563" name="ListingStage">
+      <CreatedTimestamp>2023-03-09.23:28:12.943</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-09.23:28:12.943</ModifiedTimestamp>
+      <ObjectId>1093578934</ObjectId>
+    </table>
+    <table id="5579" parent="5563" name="ReviewsStage">
+      <CreatedTimestamp>2023-03-09.23:28:25.497</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-09.23:28:25.497</ModifiedTimestamp>
+      <ObjectId>1109578991</ObjectId>
+    </table>
+    <column id="5580" parent="5576" name="id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="5581" parent="5576" name="property_type">
+      <DasType>varchar(30 char)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="5582" parent="5576" name="room_type">
+      <DasType>varchar(30 char)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="5583" parent="5576" name="accommodates">
+      <DasType>int|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="5584" parent="5576" name="bathrooms">
+      <DasType>int|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="5585" parent="5576" name="bedrooms">
+      <DasType>int|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="5586" parent="5576" name="beds">
+      <DasType>int|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="5587" parent="5576" name="bed_type">
+      <DasType>varchar(30 char)|0s</DasType>
+      <Position>8</Position>
+    </column>
+    <column id="5588" parent="5576" name="square_feet">
+      <DasType>float|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <index id="5589" parent="5576" name="PK_DimApartment">
+      <Clustering>1</Clustering>
+      <ColNames>id</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="5590" parent="5576" name="PK_DimApartment">
+      <CreatedTimestamp>2023-03-11.23:28:39.940</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-11.23:28:39.940</ModifiedTimestamp>
+      <ObjectId>1781581385</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_DimApartment</UnderlyingIndexName>
+    </key>
+    <column id="5591" parent="5577" name="listing_id">
+      <DasType>bigint|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="5592" parent="5577" name="host_id">
+      <DasType>bigint|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="5593" parent="5577" name="host_url">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="5594" parent="5577" name="host_name">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="5595" parent="5577" name="host_since">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="5596" parent="5577" name="host_location">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="5597" parent="5577" name="host_about">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="5598" parent="5577" name="host_response_time">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>8</Position>
+    </column>
+    <column id="5599" parent="5577" name="host_response_rate">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <column id="5600" parent="5577" name="host_acceptance_rate">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>10</Position>
+    </column>
+    <column id="5601" parent="5577" name="host_is_superhost">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>11</Position>
+    </column>
+    <column id="5602" parent="5577" name="host_thumbnail_url">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>12</Position>
+    </column>
+    <column id="5603" parent="5577" name="host_picture_url">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>13</Position>
+    </column>
+    <column id="5604" parent="5577" name="host_neighbourhood">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>14</Position>
+    </column>
+    <column id="5605" parent="5577" name="host_listings_count">
+      <DasType>float|0s</DasType>
+      <Position>15</Position>
+    </column>
+    <column id="5606" parent="5577" name="host_total_listings_count">
+      <DasType>float|0s</DasType>
+      <Position>16</Position>
+    </column>
+    <column id="5607" parent="5577" name="host_verifications">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>17</Position>
+    </column>
+    <column id="5608" parent="5577" name="host_has_profile_pic">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>18</Position>
+    </column>
+    <column id="5609" parent="5577" name="host_identity_verified">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>19</Position>
+    </column>
+    <column id="5610" parent="5578" name="id">
+      <DasType>bigint|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="5611" parent="5578" name="listing_url">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="5612" parent="5578" name="scrape_id">
+      <DasType>bigint|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="5613" parent="5578" name="last_scraped">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="5614" parent="5578" name="name">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="5615" parent="5578" name="summary">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="5616" parent="5578" name="space">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="5617" parent="5578" name="description">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>8</Position>
+    </column>
+    <column id="5618" parent="5578" name="experiences_offered">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <column id="5619" parent="5578" name="neighborhood_overview">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>10</Position>
+    </column>
+    <column id="5620" parent="5578" name="notes">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>11</Position>
+    </column>
+    <column id="5621" parent="5578" name="transit">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>12</Position>
+    </column>
+    <column id="5622" parent="5578" name="thumbnail_url">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>13</Position>
+    </column>
+    <column id="5623" parent="5578" name="medium_url">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>14</Position>
+    </column>
+    <column id="5624" parent="5578" name="picture_url">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>15</Position>
+    </column>
+    <column id="5625" parent="5578" name="xl_picture_url">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>16</Position>
+    </column>
+    <column id="5626" parent="5578" name="street">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>17</Position>
+    </column>
+    <column id="5627" parent="5578" name="neighbourhood">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>18</Position>
+    </column>
+    <column id="5628" parent="5578" name="neighbourhood_cleansed">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>19</Position>
+    </column>
+    <column id="5629" parent="5578" name="neighbourhood_group_cleansed">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>20</Position>
+    </column>
+    <column id="5630" parent="5578" name="city">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>21</Position>
+    </column>
+    <column id="5631" parent="5578" name="state">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>22</Position>
+    </column>
+    <column id="5632" parent="5578" name="zipcode">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>23</Position>
+    </column>
+    <column id="5633" parent="5578" name="market">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>24</Position>
+    </column>
+    <column id="5634" parent="5578" name="smart_location">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>25</Position>
+    </column>
+    <column id="5635" parent="5578" name="country_code">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>26</Position>
+    </column>
+    <column id="5636" parent="5578" name="country">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>27</Position>
+    </column>
+    <column id="5637" parent="5578" name="latitude">
+      <DasType>float|0s</DasType>
+      <Position>28</Position>
+    </column>
+    <column id="5638" parent="5578" name="longitude">
+      <DasType>float|0s</DasType>
+      <Position>29</Position>
+    </column>
+    <column id="5639" parent="5578" name="is_location_exact">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>30</Position>
+    </column>
+    <column id="5640" parent="5578" name="property_type">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>31</Position>
+    </column>
+    <column id="5641" parent="5578" name="room_type">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>32</Position>
+    </column>
+    <column id="5642" parent="5578" name="accommodates">
+      <DasType>bigint|0s</DasType>
+      <Position>33</Position>
+    </column>
+    <column id="5643" parent="5578" name="bathrooms">
+      <DasType>float|0s</DasType>
+      <Position>34</Position>
+    </column>
+    <column id="5644" parent="5578" name="bedrooms">
+      <DasType>float|0s</DasType>
+      <Position>35</Position>
+    </column>
+    <column id="5645" parent="5578" name="beds">
+      <DasType>float|0s</DasType>
+      <Position>36</Position>
+    </column>
+    <column id="5646" parent="5578" name="bed_type">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>37</Position>
+    </column>
+    <column id="5647" parent="5578" name="amenities">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>38</Position>
+    </column>
+    <column id="5648" parent="5578" name="square_feet">
+      <DasType>float|0s</DasType>
+      <Position>39</Position>
+    </column>
+    <column id="5649" parent="5578" name="price">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>40</Position>
+    </column>
+    <column id="5650" parent="5578" name="weekly_price">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>41</Position>
+    </column>
+    <column id="5651" parent="5578" name="monthly_price">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>42</Position>
+    </column>
+    <column id="5652" parent="5578" name="security_deposit">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>43</Position>
+    </column>
+    <column id="5653" parent="5578" name="cleaning_fee">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>44</Position>
+    </column>
+    <column id="5654" parent="5578" name="guests_included">
+      <DasType>bigint|0s</DasType>
+      <Position>45</Position>
+    </column>
+    <column id="5655" parent="5578" name="extra_people">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>46</Position>
+    </column>
+    <column id="5656" parent="5578" name="minimum_nights">
+      <DasType>bigint|0s</DasType>
+      <Position>47</Position>
+    </column>
+    <column id="5657" parent="5578" name="maximum_nights">
+      <DasType>bigint|0s</DasType>
+      <Position>48</Position>
+    </column>
+    <column id="5658" parent="5578" name="calendar_updated">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>49</Position>
+    </column>
+    <column id="5659" parent="5578" name="has_availability">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>50</Position>
+    </column>
+    <column id="5660" parent="5578" name="availability_30">
+      <DasType>bigint|0s</DasType>
+      <Position>51</Position>
+    </column>
+    <column id="5661" parent="5578" name="availability_60">
+      <DasType>bigint|0s</DasType>
+      <Position>52</Position>
+    </column>
+    <column id="5662" parent="5578" name="availability_90">
+      <DasType>bigint|0s</DasType>
+      <Position>53</Position>
+    </column>
+    <column id="5663" parent="5578" name="availability_365">
+      <DasType>bigint|0s</DasType>
+      <Position>54</Position>
+    </column>
+    <column id="5664" parent="5578" name="calendar_last_scraped">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>55</Position>
+    </column>
+    <column id="5665" parent="5578" name="number_of_reviews">
+      <DasType>bigint|0s</DasType>
+      <Position>56</Position>
+    </column>
+    <column id="5666" parent="5578" name="first_review">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>57</Position>
+    </column>
+    <column id="5667" parent="5578" name="last_review">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>58</Position>
+    </column>
+    <column id="5668" parent="5578" name="review_scores_rating">
+      <DasType>float|0s</DasType>
+      <Position>59</Position>
+    </column>
+    <column id="5669" parent="5578" name="review_scores_accuracy">
+      <DasType>float|0s</DasType>
+      <Position>60</Position>
+    </column>
+    <column id="5670" parent="5578" name="review_scores_cleanliness">
+      <DasType>float|0s</DasType>
+      <Position>61</Position>
+    </column>
+    <column id="5671" parent="5578" name="review_scores_checkin">
+      <DasType>float|0s</DasType>
+      <Position>62</Position>
+    </column>
+    <column id="5672" parent="5578" name="review_scores_communication">
+      <DasType>float|0s</DasType>
+      <Position>63</Position>
+    </column>
+    <column id="5673" parent="5578" name="review_scores_location">
+      <DasType>float|0s</DasType>
+      <Position>64</Position>
+    </column>
+    <column id="5674" parent="5578" name="review_scores_value">
+      <DasType>float|0s</DasType>
+      <Position>65</Position>
+    </column>
+    <column id="5675" parent="5578" name="requires_license">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>66</Position>
+    </column>
+    <column id="5676" parent="5578" name="license">
+      <DasType>float|0s</DasType>
+      <Position>67</Position>
+    </column>
+    <column id="5677" parent="5578" name="jurisdiction_names">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>68</Position>
+    </column>
+    <column id="5678" parent="5578" name="instant_bookable">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>69</Position>
+    </column>
+    <column id="5679" parent="5578" name="cancellation_policy">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>70</Position>
+    </column>
+    <column id="5680" parent="5578" name="require_guest_profile_picture">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>71</Position>
+    </column>
+    <column id="5681" parent="5578" name="require_guest_phone_verification">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>72</Position>
+    </column>
+    <column id="5682" parent="5578" name="calculated_host_listings_count">
+      <DasType>bigint|0s</DasType>
+      <Position>73</Position>
+    </column>
+    <column id="5683" parent="5578" name="reviews_per_month">
+      <DasType>float|0s</DasType>
+      <Position>74</Position>
+    </column>
+    <column id="5684" parent="5579" name="listing_id">
+      <DasType>bigint|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="5685" parent="5579" name="id">
+      <DasType>bigint|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="5686" parent="5579" name="date">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="5687" parent="5579" name="reviewer_id">
+      <DasType>bigint|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="5688" parent="5579" name="reviewer_name">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="5689" parent="5579" name="comments">
+      <DasType>varchar(max)|0s</DasType>
+      <Position>6</Position>
+    </column>
   </database-model>
 </dataSource>
