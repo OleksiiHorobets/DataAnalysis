@@ -114,44 +114,35 @@ def transform_dim_apartment(listings: pd.DataFrame):
     dim_apartment_raw.set_index('id', inplace=True)
 
     # print(dim_apartment_raw)
+    try:
+        with engine.connect() as conn:
+            conn.execute(text("DROP TABLE IF EXISTS airbnb.DimApartment;"))
+            query = text('''              
+                    CREATE TABLE airbnb.DimApartment
+                    (
+                        id bigint,
+                        property_type varchar(30),
+                        room_type varchar(30),
+                        accommodates int,
+                        bathrooms int,
+                        bedrooms int,
+                        beds int,
+                        bed_type varchar(30),
+                        square_feet float
+                    
+                        CONSTRAINT PK_DimApartment PRIMARY KEY (id)
+                    );''')
+            conn.execute(query)
+            conn.commit()
+    except Exception as e:
+        print(e)
 
 
+    # query = "INSERT INTO airbnb.DimApartment (id, property_type ,room_type, accommodates, bathrooms, bedrooms, beds, bed_type, square_feet)  VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)"
 
-    with engine.connect() as conn:
-        query =text( """use Airbnb;
-            DROP TABLE IF EXISTS DimApartment;
-            CREATE TABLE airbnb.DimApartment
-            (
-                id bigint,
-                property_type VARCHAR(30),
-                room_type VARCHAR(30),
-                accommodates int,
-                bathrooms int,
-                bedrooms int,
-                beds int,
-                bed_type VARCHAR(30),
-                square_feet float
-            
-                CONSTRAINT PK_DimApartment PRIMARY KEY (id)
-            );""")
-        conn.execute(query)
-
-        query = "INSERT INTO airbnb.DimApartment (id, property_type ,room_type, accommodates, bathrooms, bedrooms, beds, bed_type, square_feet)  VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-
-        dim_apartment_raw.to_sql(name="DimApartment", con=engine, if_exists='append',
-                                 schema='airbnb',
-                                 # dtype={
-                                 #     'id': sqlalchemy.BIGINT,
-                                 #     'property_type': sqlalchemy.VARCHAR(length=30),
-                                 #     'room_type': sqlalchemy.VARCHAR(length=30),
-                                 #     'accommodates': sqlalchemy.INTEGER(),
-                                 #     'bathrooms': sqlalchemy.NVARCHAR(length=200),
-                                 #     'bedrooms': sqlalchemy.INTEGER,
-                                 #     'beds': sqlalchemy.INTEGER,
-                                 #     'bed_type': sqlalchemy.VARCHAR(length=50),
-                                 #     'square_feet': sqlalchemy.FLOAT()
-                                 # }
-                                 )
+    dim_apartment_raw.to_sql(name="DimApartment", con=engine, if_exists='append',
+                             schema='airbnb',
+                             )
 
     return dim_apartment_raw
 

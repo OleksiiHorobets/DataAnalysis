@@ -16850,11 +16850,11 @@
       <ObjectId>3</ObjectId>
     </schema>
     <schema id="5562" parent="5510" name="airbnb">
-      <IntrospectionTimestamp>2023-03-11.23:32:16.217</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-03-12.14:10:45.277</IntrospectionTimestamp>
       <ObjectId>6</ObjectId>
     </schema>
     <schema id="5563" parent="5510" name="airbnb_stage">
-      <IntrospectionTimestamp>2023-03-11.23:29:25.920</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-03-12.14:03:27.503</IntrospectionTimestamp>
       <ObjectId>5</ObjectId>
     </schema>
     <schema id="5564" parent="5510" name="db_accessadmin">
@@ -16886,7 +16886,7 @@
     </schema>
     <schema id="5573" parent="5510" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-03-11.23:29:25.940</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-03-12.14:03:27.537</IntrospectionTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="5574" parent="5510" name="guest">
@@ -16896,9 +16896,9 @@
       <ObjectId>4</ObjectId>
     </schema>
     <table id="5576" parent="5562" name="DimApartment">
-      <CreatedTimestamp>2023-03-11.23:28:39.940</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-11.23:28:39.940</ModifiedTimestamp>
-      <ObjectId>1765581328</ObjectId>
+      <CreatedTimestamp>2023-03-12.14:10:29.183</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-12.14:10:29.183</ModifiedTimestamp>
+      <ObjectId>498100815</ObjectId>
     </table>
     <table id="5577" parent="5563" name="HostsStage">
       <CreatedTimestamp>2023-03-09.23:28:10.053</CreatedTimestamp>
@@ -16959,9 +16959,9 @@
       <Unique>1</Unique>
     </index>
     <key id="5590" parent="5576" name="PK_DimApartment">
-      <CreatedTimestamp>2023-03-11.23:28:39.940</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-11.23:28:39.940</ModifiedTimestamp>
-      <ObjectId>1781581385</ObjectId>
+      <CreatedTimestamp>2023-03-12.14:10:29.187</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-12.14:10:29.187</ModifiedTimestamp>
+      <ObjectId>514100872</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_DimApartment</UnderlyingIndexName>
     </key>
