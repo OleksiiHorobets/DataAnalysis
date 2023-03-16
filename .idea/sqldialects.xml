@@ -2,5 +2,6 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/main.py" dialect="BigQuery" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/925928d4-0528-4f67-b9a8-00ae1d94b8eb/console.sql" dialect="TSQL" />
   </component>
 </project>
