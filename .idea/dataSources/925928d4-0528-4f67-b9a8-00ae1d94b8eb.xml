@@ -16854,11 +16854,11 @@
       <ObjectId>3</ObjectId>
     </schema>
     <schema id="5563" parent="5510" name="airbnb">
-      <IntrospectionTimestamp>2023-03-17.02:01:16.760</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-03-17.14:08:27.373</IntrospectionTimestamp>
       <ObjectId>6</ObjectId>
     </schema>
     <schema id="5564" parent="5510" name="airbnb_stage">
-      <IntrospectionTimestamp>2023-03-17.02:01:00.563</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-03-17.14:08:27.410</IntrospectionTimestamp>
       <ObjectId>5</ObjectId>
     </schema>
     <schema id="5565" parent="5510" name="db_accessadmin">
@@ -16905,7 +16905,7 @@
 2043154324|||2|execute|D
 2059154381|||0|execute|G
 2059154381|||2|execute|D</Grants>
-      <IntrospectionTimestamp>2023-03-17.02:01:00.570</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-03-17.14:08:27.430</IntrospectionTimestamp>
       <ObjectId>1</ObjectId>
       <PermissionsCheckSum>18456041151</PermissionsCheckSum>
     </schema>
@@ -16916,1004 +16916,1117 @@
       <ObjectId>4</ObjectId>
     </schema>
     <table id="5577" parent="5563" name="DimApartments">
-      <CreatedTimestamp>2023-03-17.01:58:07.883</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>736057708</ObjectId>
+      <CreatedTimestamp>2023-03-17.12:46:45.137</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>418152585</ObjectId>
     </table>
-    <table id="5578" parent="5563" name="DimHosts">
-      <CreatedTimestamp>2023-03-17.01:58:07.883</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>832058050</ObjectId>
+    <table id="5578" parent="5563" name="DimDates">
+      <CreatedTimestamp>2023-03-17.12:46:45.277</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.400</ModifiedTimestamp>
+      <ObjectId>674153497</ObjectId>
     </table>
-    <table id="5579" parent="5563" name="DimHostsNeighbourhood">
-      <CreatedTimestamp>2023-03-17.01:58:07.883</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>768057822</ObjectId>
+    <table id="5579" parent="5563" name="DimHosts">
+      <CreatedTimestamp>2023-03-17.12:46:45.140</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>514152927</ObjectId>
     </table>
-    <table id="5580" parent="5563" name="DimHostsResponseTime">
-      <CreatedTimestamp>2023-03-17.01:58:07.883</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>800057936</ObjectId>
+    <table id="5580" parent="5563" name="DimHostsNeighbourhood">
+      <CreatedTimestamp>2023-03-17.12:46:45.140</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>450152699</ObjectId>
     </table>
-    <table id="5581" parent="5563" name="DimListings">
-      <CreatedTimestamp>2023-03-17.01:58:07.937</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>864058164</ObjectId>
+    <table id="5581" parent="5563" name="DimHostsResponseTime">
+      <CreatedTimestamp>2023-03-17.12:46:45.140</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>482152813</ObjectId>
     </table>
-    <table id="5582" parent="5563" name="DimLocations">
-      <CreatedTimestamp>2023-03-17.01:58:08</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>896058278</ObjectId>
+    <table id="5582" parent="5563" name="DimListings">
+      <CreatedTimestamp>2023-03-17.12:46:45.197</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>578153155</ObjectId>
     </table>
-    <table id="5583" parent="5563" name="DimPropertyType">
-      <CreatedTimestamp>2023-03-17.01:58:07.880</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>672057480</ObjectId>
+    <table id="5583" parent="5563" name="DimLocations">
+      <CreatedTimestamp>2023-03-17.12:46:45.263</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>642153383</ObjectId>
     </table>
-    <table id="5584" parent="5563" name="DimRoomType">
-      <CreatedTimestamp>2023-03-17.01:58:07.880</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>704057594</ObjectId>
+    <table id="5584" parent="5563" name="DimPropertyType">
+      <CreatedTimestamp>2023-03-17.12:46:45.133</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>354152357</ObjectId>
     </table>
-    <table id="5585" parent="5563" name="FactRents">
-      <CreatedTimestamp>2023-03-17.01:58:08.010</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>928058392</ObjectId>
+    <table id="5585" parent="5563" name="DimRoomType">
+      <CreatedTimestamp>2023-03-17.12:46:45.133</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.400</ModifiedTimestamp>
+      <ObjectId>386152471</ObjectId>
     </table>
-    <table id="5586" parent="5564" name="CalendarStage">
+    <table id="5586" parent="5563" name="FactRents">
+      <CreatedTimestamp>2023-03-17.12:46:45.397</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>706153611</ObjectId>
+    </table>
+    <table id="5587" parent="5564" name="CalendarStage">
       <CreatedTimestamp>2023-03-17.00:59:59.790</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-17.00:59:59.790</ModifiedTimestamp>
       <ObjectId>1139535143</ObjectId>
     </table>
-    <table id="5587" parent="5564" name="HostsStage">
+    <table id="5588" parent="5564" name="HostsStage">
       <CreatedTimestamp>2023-03-17.00:59:48.627</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-17.00:59:48.627</ModifiedTimestamp>
       <ObjectId>1107535029</ObjectId>
     </table>
-    <table id="5588" parent="5564" name="ListingStage">
+    <table id="5589" parent="5564" name="ListingStage">
       <CreatedTimestamp>2023-03-17.00:59:50.410</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-17.00:59:50.410</ModifiedTimestamp>
       <ObjectId>1123535086</ObjectId>
     </table>
-    <routine id="5589" parent="5574" name="fn_diagramobjects">
+    <routine id="5590" parent="5574" name="fn_diagramobjects">
       <CreatedTimestamp>2023-03-14.21:29:46.007</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-14.21:29:46.007</ModifiedTimestamp>
       <ObjectId>2059154381</ObjectId>
       <RoutineType>scalar-fun</RoutineType>
       <SourceTextLength>1647</SourceTextLength>
     </routine>
-    <routine id="5590" parent="5574" name="sp_alterdiagram">
+    <routine id="5591" parent="5574" name="sp_alterdiagram">
       <CreatedTimestamp>2023-03-14.21:29:46</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-14.21:29:46</ModifiedTimestamp>
       <ObjectId>2027154267</ObjectId>
       <RoutineType>proc</RoutineType>
       <SourceTextLength>1501</SourceTextLength>
     </routine>
-    <routine id="5591" parent="5574" name="sp_creatediagram">
+    <routine id="5592" parent="5574" name="sp_creatediagram">
       <CreatedTimestamp>2023-03-14.21:29:45.997</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-14.21:29:45.997</ModifiedTimestamp>
       <ObjectId>1995154153</ObjectId>
       <RoutineType>proc</RoutineType>
       <SourceTextLength>1223</SourceTextLength>
     </routine>
-    <routine id="5592" parent="5574" name="sp_dropdiagram">
+    <routine id="5593" parent="5574" name="sp_dropdiagram">
       <CreatedTimestamp>2023-03-14.21:29:46.003</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-14.21:29:46.003</ModifiedTimestamp>
       <ObjectId>2043154324</ObjectId>
       <RoutineType>proc</RoutineType>
       <SourceTextLength>896</SourceTextLength>
     </routine>
-    <routine id="5593" parent="5574" name="sp_helpdiagramdefinition">
+    <routine id="5594" parent="5574" name="sp_helpdiagramdefinition">
       <CreatedTimestamp>2023-03-14.21:29:45.993</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-14.21:29:45.993</ModifiedTimestamp>
       <ObjectId>1979154096</ObjectId>
       <RoutineType>proc</RoutineType>
       <SourceTextLength>921</SourceTextLength>
     </routine>
-    <routine id="5594" parent="5574" name="sp_helpdiagrams">
+    <routine id="5595" parent="5574" name="sp_helpdiagrams">
       <CreatedTimestamp>2023-03-14.21:29:45.983</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-14.21:29:45.983</ModifiedTimestamp>
       <ObjectId>1963154039</ObjectId>
       <RoutineType>proc</RoutineType>
       <SourceTextLength>658</SourceTextLength>
     </routine>
-    <routine id="5595" parent="5574" name="sp_renamediagram">
+    <routine id="5596" parent="5574" name="sp_renamediagram">
       <CreatedTimestamp>2023-03-14.21:29:46</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-14.21:29:46</ModifiedTimestamp>
       <ObjectId>2011154210</ObjectId>
       <RoutineType>proc</RoutineType>
       <SourceTextLength>1721</SourceTextLength>
     </routine>
-    <routine id="5596" parent="5574" name="sp_upgraddiagrams">
+    <routine id="5597" parent="5574" name="sp_upgraddiagrams">
       <CreatedTimestamp>2023-03-14.21:29:45.977</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-14.21:29:45.977</ModifiedTimestamp>
       <ObjectId>1899153811</ObjectId>
       <RoutineType>proc</RoutineType>
       <SourceTextLength>1463</SourceTextLength>
     </routine>
-    <table id="5597" parent="5574" name="sysdiagrams">
+    <table id="5598" parent="5574" name="sysdiagrams">
       <CreatedTimestamp>2023-03-14.21:29:45.980</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-14.21:29:45.980</ModifiedTimestamp>
       <ObjectId>1915153868</ObjectId>
     </table>
-    <column id="5598" parent="5577" name="id">
+    <column id="5599" parent="5577" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1(411)</SequenceIdentity>
     </column>
-    <column id="5599" parent="5577" name="accommodates">
+    <column id="5600" parent="5577" name="accommodates">
       <DasType>float|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5600" parent="5577" name="bathrooms">
+    <column id="5601" parent="5577" name="bathrooms">
       <DasType>float|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5601" parent="5577" name="bedrooms">
+    <column id="5602" parent="5577" name="bedrooms">
       <DasType>float|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5602" parent="5577" name="beds">
+    <column id="5603" parent="5577" name="beds">
       <DasType>float|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5603" parent="5577" name="square_feet">
+    <column id="5604" parent="5577" name="square_feet">
       <DasType>float|0s</DasType>
       <Position>6</Position>
     </column>
-    <index id="5604" parent="5577" name="PK_DimApartments">
+    <index id="5605" parent="5577" name="PK_DimApartments">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5605" parent="5577" name="PK_DimApartments">
-      <CreatedTimestamp>2023-03-17.01:58:07.883</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:07.883</ModifiedTimestamp>
-      <ObjectId>752057765</ObjectId>
+    <key id="5606" parent="5577" name="PK_DimApartments">
+      <CreatedTimestamp>2023-03-17.12:46:45.137</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.137</ModifiedTimestamp>
+      <ObjectId>434152642</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_DimApartments</UnderlyingIndexName>
     </key>
-    <column id="5606" parent="5578" name="id">
+    <column id="5607" parent="5578" name="id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1(1463)</SequenceIdentity>
+    </column>
+    <column id="5608" parent="5578" name="day">
+      <DasType>int|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="5609" parent="5578" name="month">
+      <DasType>int|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="5610" parent="5578" name="year">
+      <DasType>int|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <index id="5611" parent="5578" name="PK_DimDates">
+      <Clustering>1</Clustering>
+      <ColNames>id</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="5612" parent="5578" name="PK_DimDates">
+      <CreatedTimestamp>2023-03-17.12:46:45.277</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.277</ModifiedTimestamp>
+      <ObjectId>690153554</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_DimDates</UnderlyingIndexName>
+    </key>
+    <column id="5613" parent="5579" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5607" parent="5578" name="host_name">
+    <column id="5614" parent="5579" name="host_name">
       <DasType>varchar(130 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5608" parent="5578" name="host_about">
+    <column id="5615" parent="5579" name="host_about">
       <DasType>varchar(5000 char)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5609" parent="5578" name="host_response_rate">
+    <column id="5616" parent="5579" name="host_response_rate">
       <DasType>float|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5610" parent="5578" name="host_acceptance_rate">
+    <column id="5617" parent="5579" name="host_acceptance_rate">
       <DasType>float|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5611" parent="5578" name="host_is_superhost">
+    <column id="5618" parent="5579" name="host_is_superhost">
       <DasType>bit|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5612" parent="5578" name="host_has_profile_pic">
+    <column id="5619" parent="5579" name="host_has_profile_pic">
       <DasType>bit|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="5613" parent="5578" name="host_identity_verified">
+    <column id="5620" parent="5579" name="host_identity_verified">
       <DasType>bit|0s</DasType>
       <Position>8</Position>
     </column>
-    <index id="5614" parent="5578" name="PK_DimHosts">
+    <column id="5621" parent="5579" name="start_date">
+      <DasType>datetime|0s</DasType>
+      <Position>9</Position>
+      <DefaultConstraintId>546153041</DefaultConstraintId>
+      <DefaultConstraintName>DF__DimHosts__start___208DA251</DefaultConstraintName>
+    </column>
+    <column id="5622" parent="5579" name="end_date">
+      <DasType>datetime|0s</DasType>
+      <Position>10</Position>
+    </column>
+    <column id="5623" parent="5579" name="prev_record_id">
+      <DasType>bigint|0s</DasType>
+      <Position>11</Position>
+    </column>
+    <default id="5624" parent="5579" name="DF__DimHosts__start___208DA251">
+      <ColNames>start_date</ColNames>
+      <DefaultExpression>getdate()</DefaultExpression>
+      <ModifiedTimestamp>2023-03-17.12:46:45.143</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>546153041</ObjectId>
+    </default>
+    <foreign-key id="5625" parent="5579" name="FK_DimHosts_prev_record_id">
+      <ColNames>id</ColNames>
+      <CreatedTimestamp>2023-03-17.12:46:45.143</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.143</ModifiedTimestamp>
+      <ObjectId>562153098</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefTableId>514152927</RefTableId>
+      <RefTableName>DimHosts</RefTableName>
+    </foreign-key>
+    <index id="5626" parent="5579" name="PK_DimHosts">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5615" parent="5578" name="PK_DimHosts">
-      <CreatedTimestamp>2023-03-17.01:58:07.887</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:07.887</ModifiedTimestamp>
-      <ObjectId>848058107</ObjectId>
+    <key id="5627" parent="5579" name="PK_DimHosts">
+      <CreatedTimestamp>2023-03-17.12:46:45.143</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.143</ModifiedTimestamp>
+      <ObjectId>530152984</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_DimHosts</UnderlyingIndexName>
     </key>
-    <column id="5616" parent="5579" name="id">
+    <column id="5628" parent="5580" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1(103)</SequenceIdentity>
     </column>
-    <column id="5617" parent="5579" name="host_neighbourhood">
+    <column id="5629" parent="5580" name="host_neighbourhood">
       <DasType>varchar(100 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <index id="5618" parent="5579" name="PK_DimHostsNeighbourhood">
+    <index id="5630" parent="5580" name="PK_DimHostsNeighbourhood">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5619" parent="5579" name="PK_DimHostsNeighbourhood">
-      <CreatedTimestamp>2023-03-17.01:58:07.883</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:07.883</ModifiedTimestamp>
-      <ObjectId>784057879</ObjectId>
+    <key id="5631" parent="5580" name="PK_DimHostsNeighbourhood">
+      <CreatedTimestamp>2023-03-17.12:46:45.140</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.140</ModifiedTimestamp>
+      <ObjectId>466152756</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_DimHostsNeighbourhood</UnderlyingIndexName>
     </key>
-    <column id="5620" parent="5580" name="id">
+    <column id="5632" parent="5581" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1(5)</SequenceIdentity>
     </column>
-    <column id="5621" parent="5580" name="host_response_time">
+    <column id="5633" parent="5581" name="host_response_time">
       <DasType>varchar(100 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <index id="5622" parent="5580" name="PK_DimHostsResponseTime">
+    <index id="5634" parent="5581" name="PK_DimHostsResponseTime">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5623" parent="5580" name="PK_DimHostsResponseTime">
-      <CreatedTimestamp>2023-03-17.01:58:07.883</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:07.883</ModifiedTimestamp>
-      <ObjectId>816057993</ObjectId>
+    <key id="5635" parent="5581" name="PK_DimHostsResponseTime">
+      <CreatedTimestamp>2023-03-17.12:46:45.140</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.140</ModifiedTimestamp>
+      <ObjectId>498152870</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_DimHostsResponseTime</UnderlyingIndexName>
-    </key>
-    <column id="5624" parent="5581" name="id">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="5625" parent="5581" name="name">
-      <DasType>varchar(100 char)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="5626" parent="5581" name="summary">
-      <DasType>varchar(1000 char)|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="5627" parent="5581" name="space">
-      <DasType>varchar(1000 char)|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <column id="5628" parent="5581" name="notes">
-      <DasType>varchar(1000 char)|0s</DasType>
-      <Position>5</Position>
-    </column>
-    <column id="5629" parent="5581" name="minimum_nights">
-      <DasType>float|0s</DasType>
-      <Position>6</Position>
-    </column>
-    <column id="5630" parent="5581" name="maximum_nights">
-      <DasType>float|0s</DasType>
-      <Position>7</Position>
-    </column>
-    <column id="5631" parent="5581" name="number_of_reviews">
-      <DasType>float|0s</DasType>
-      <Position>8</Position>
-    </column>
-    <column id="5632" parent="5581" name="review_scores_rating">
-      <DasType>float|0s</DasType>
-      <Position>9</Position>
-    </column>
-    <column id="5633" parent="5581" name="require_guest_profile_picture">
-      <DasType>bit|0s</DasType>
-      <Position>10</Position>
-    </column>
-    <index id="5634" parent="5581" name="PK_DimListings">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <Position>1</Position>
-      <Unique>1</Unique>
-    </index>
-    <key id="5635" parent="5581" name="PK_DimListings">
-      <CreatedTimestamp>2023-03-17.01:58:07.937</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:07.937</ModifiedTimestamp>
-      <ObjectId>880058221</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK_DimListings</UnderlyingIndexName>
     </key>
     <column id="5636" parent="5582" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1(3819)</SequenceIdentity>
     </column>
-    <column id="5637" parent="5582" name="latitude">
-      <DasType>float|0s</DasType>
+    <column id="5637" parent="5582" name="name">
+      <DasType>varchar(100 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5638" parent="5582" name="longitude">
-      <DasType>float|0s</DasType>
+    <column id="5638" parent="5582" name="summary">
+      <DasType>varchar(1000 char)|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="5639" parent="5582" name="PK_DimLocations">
+    <column id="5639" parent="5582" name="space">
+      <DasType>varchar(1000 char)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="5640" parent="5582" name="notes">
+      <DasType>varchar(1000 char)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="5641" parent="5582" name="minimum_nights">
+      <DasType>float|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="5642" parent="5582" name="maximum_nights">
+      <DasType>float|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="5643" parent="5582" name="number_of_reviews">
+      <DasType>float|0s</DasType>
+      <Position>8</Position>
+    </column>
+    <column id="5644" parent="5582" name="review_scores_rating">
+      <DasType>float|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <column id="5645" parent="5582" name="require_guest_profile_picture">
+      <DasType>bit|0s</DasType>
+      <Position>10</Position>
+    </column>
+    <column id="5646" parent="5582" name="start_date">
+      <DasType>datetime|0s</DasType>
+      <Position>11</Position>
+      <DefaultConstraintId>610153269</DefaultConstraintId>
+      <DefaultConstraintName>DF__DimListin__start__245E3335</DefaultConstraintName>
+    </column>
+    <column id="5647" parent="5582" name="end_date">
+      <DasType>datetime|0s</DasType>
+      <Position>12</Position>
+    </column>
+    <column id="5648" parent="5582" name="prev_record_id">
+      <DasType>bigint|0s</DasType>
+      <Position>13</Position>
+    </column>
+    <default id="5649" parent="5582" name="DF__DimListin__start__245E3335">
+      <ColNames>start_date</ColNames>
+      <DefaultExpression>getdate()</DefaultExpression>
+      <ModifiedTimestamp>2023-03-17.12:46:45.197</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>610153269</ObjectId>
+    </default>
+    <foreign-key id="5650" parent="5582" name="FK_DimListings_prev_record_id">
+      <ColNames>id</ColNames>
+      <CreatedTimestamp>2023-03-17.12:46:45.197</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.197</ModifiedTimestamp>
+      <ObjectId>626153326</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefTableId>578153155</RefTableId>
+      <RefTableName>DimListings</RefTableName>
+    </foreign-key>
+    <index id="5651" parent="5582" name="PK_DimListings">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5640" parent="5582" name="PK_DimLocations">
-      <CreatedTimestamp>2023-03-17.01:58:08</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08</ModifiedTimestamp>
-      <ObjectId>912058335</ObjectId>
+    <key id="5652" parent="5582" name="PK_DimListings">
+      <CreatedTimestamp>2023-03-17.12:46:45.197</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.197</ModifiedTimestamp>
+      <ObjectId>594153212</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_DimListings</UnderlyingIndexName>
+    </key>
+    <column id="5653" parent="5583" name="id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1(3819)</SequenceIdentity>
+    </column>
+    <column id="5654" parent="5583" name="latitude">
+      <DasType>float|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="5655" parent="5583" name="longitude">
+      <DasType>float|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <index id="5656" parent="5583" name="PK_DimLocations">
+      <Clustering>1</Clustering>
+      <ColNames>id</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="5657" parent="5583" name="PK_DimLocations">
+      <CreatedTimestamp>2023-03-17.12:46:45.263</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.263</ModifiedTimestamp>
+      <ObjectId>658153440</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_DimLocations</UnderlyingIndexName>
     </key>
-    <column id="5641" parent="5583" name="id">
+    <column id="5658" parent="5584" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1(17)</SequenceIdentity>
     </column>
-    <column id="5642" parent="5583" name="property_type">
+    <column id="5659" parent="5584" name="property_type">
       <DasType>varchar(30 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <index id="5643" parent="5583" name="PK_DimPropertyType">
+    <index id="5660" parent="5584" name="PK_DimPropertyType">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5644" parent="5583" name="PK_DimPropertyType">
-      <CreatedTimestamp>2023-03-17.01:58:07.880</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:07.880</ModifiedTimestamp>
-      <ObjectId>688057537</ObjectId>
+    <key id="5661" parent="5584" name="PK_DimPropertyType">
+      <CreatedTimestamp>2023-03-17.12:46:45.133</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.133</ModifiedTimestamp>
+      <ObjectId>370152414</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_DimPropertyType</UnderlyingIndexName>
     </key>
-    <column id="5645" parent="5584" name="id">
+    <column id="5662" parent="5585" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1(4)</SequenceIdentity>
     </column>
-    <column id="5646" parent="5584" name="room_type">
+    <column id="5663" parent="5585" name="room_type">
       <DasType>varchar(30 char)|0s</DasType>
       <Position>2</Position>
     </column>
-    <index id="5647" parent="5584" name="PK_DimRoomType">
+    <index id="5664" parent="5585" name="PK_DimRoomType">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5648" parent="5584" name="PK_DimRoomType">
-      <CreatedTimestamp>2023-03-17.01:58:07.880</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:07.880</ModifiedTimestamp>
-      <ObjectId>720057651</ObjectId>
+    <key id="5665" parent="5585" name="PK_DimRoomType">
+      <CreatedTimestamp>2023-03-17.12:46:45.137</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.137</ModifiedTimestamp>
+      <ObjectId>402152528</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_DimRoomType</UnderlyingIndexName>
     </key>
-    <column id="5649" parent="5585" name="id">
+    <column id="5666" parent="5586" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1(3141)</SequenceIdentity>
+      <SequenceIdentity>1(459029)</SequenceIdentity>
     </column>
-    <column id="5650" parent="5585" name="dim_apartment_id">
+    <column id="5667" parent="5586" name="dim_apartment_id">
       <DasType>bigint|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5651" parent="5585" name="dim_host_id">
+    <column id="5668" parent="5586" name="dim_host_id">
       <DasType>bigint|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5652" parent="5585" name="dim_hosts_neighbourhood_id">
+    <column id="5669" parent="5586" name="dim_hosts_neighbourhood_id">
       <DasType>bigint|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5653" parent="5585" name="dim_response_time_id">
+    <column id="5670" parent="5586" name="dim_response_time_id">
       <DasType>bigint|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5654" parent="5585" name="dim_listings_id">
+    <column id="5671" parent="5586" name="dim_listings_id">
       <DasType>bigint|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5655" parent="5585" name="dim_locations_id">
+    <column id="5672" parent="5586" name="dim_locations_id">
       <DasType>bigint|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="5656" parent="5585" name="dim_property_type_id">
+    <column id="5673" parent="5586" name="dim_property_type_id">
       <DasType>bigint|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="5657" parent="5585" name="dim_room_type_id">
+    <column id="5674" parent="5586" name="dim_room_type_id">
       <DasType>bigint|0s</DasType>
       <Position>9</Position>
     </column>
-    <foreign-key id="5658" parent="5585" name="FK_FactRents_dim_apartment_id">
+    <column id="5675" parent="5586" name="dim_date_id">
+      <DasType>bigint|0s</DasType>
+      <Position>10</Position>
+    </column>
+    <column id="5676" parent="5586" name="price">
+      <DasType>money|0s</DasType>
+      <Position>11</Position>
+    </column>
+    <foreign-key id="5677" parent="5586" name="FK_FactRents_dim_apartment_id">
       <ColNames>dim_apartment_id</ColNames>
-      <CreatedTimestamp>2023-03-17.01:58:08.010</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>960058506</ObjectId>
+      <CreatedTimestamp>2023-03-17.12:46:45.397</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>738153725</ObjectId>
       <RefColNames>id</RefColNames>
-      <RefTableId>736057708</RefTableId>
+      <RefTableId>418152585</RefTableId>
       <RefTableName>DimApartments</RefTableName>
     </foreign-key>
-    <foreign-key id="5659" parent="5585" name="FK_FactRents_dim_host_id">
+    <foreign-key id="5678" parent="5586" name="FK_FactRents_dim_host_id">
       <ColNames>dim_host_id</ColNames>
-      <CreatedTimestamp>2023-03-17.01:58:08.010</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>976058563</ObjectId>
+      <CreatedTimestamp>2023-03-17.12:46:45.397</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>754153782</ObjectId>
       <RefColNames>id</RefColNames>
-      <RefTableId>832058050</RefTableId>
+      <RefTableId>514152927</RefTableId>
       <RefTableName>DimHosts</RefTableName>
     </foreign-key>
-    <foreign-key id="5660" parent="5585" name="FK_FactRents_dim_hosts_neighbourhood_id">
+    <foreign-key id="5679" parent="5586" name="FK_FactRents_dim_hosts_neighbourhood_id">
       <ColNames>dim_hosts_neighbourhood_id</ColNames>
-      <CreatedTimestamp>2023-03-17.01:58:08.010</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>992058620</ObjectId>
+      <CreatedTimestamp>2023-03-17.12:46:45.397</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>770153839</ObjectId>
       <RefColNames>id</RefColNames>
-      <RefTableId>768057822</RefTableId>
+      <RefTableId>450152699</RefTableId>
       <RefTableName>DimHostsNeighbourhood</RefTableName>
     </foreign-key>
-    <foreign-key id="5661" parent="5585" name="FK_FactRents_dim_response_time_id">
+    <foreign-key id="5680" parent="5586" name="FK_FactRents_dim_response_time_id">
       <ColNames>dim_response_time_id</ColNames>
-      <CreatedTimestamp>2023-03-17.01:58:08.010</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>1008058677</ObjectId>
+      <CreatedTimestamp>2023-03-17.12:46:45.397</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>786153896</ObjectId>
       <RefColNames>id</RefColNames>
-      <RefTableId>800057936</RefTableId>
+      <RefTableId>482152813</RefTableId>
       <RefTableName>DimHostsResponseTime</RefTableName>
     </foreign-key>
-    <foreign-key id="5662" parent="5585" name="FK_FactRents_dim_listings_id">
+    <foreign-key id="5681" parent="5586" name="FK_FactRents_dim_listings_id">
       <ColNames>dim_listings_id</ColNames>
-      <CreatedTimestamp>2023-03-17.01:58:08.010</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>1024058734</ObjectId>
+      <CreatedTimestamp>2023-03-17.12:46:45.397</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>802153953</ObjectId>
       <RefColNames>id</RefColNames>
-      <RefTableId>864058164</RefTableId>
+      <RefTableId>578153155</RefTableId>
       <RefTableName>DimListings</RefTableName>
     </foreign-key>
-    <foreign-key id="5663" parent="5585" name="FK_FactRents_dim_locations_id">
+    <foreign-key id="5682" parent="5586" name="FK_FactRents_dim_locations_id">
       <ColNames>dim_locations_id</ColNames>
-      <CreatedTimestamp>2023-03-17.01:58:08.010</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>1040058791</ObjectId>
+      <CreatedTimestamp>2023-03-17.12:46:45.397</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>818154010</ObjectId>
       <RefColNames>id</RefColNames>
-      <RefTableId>896058278</RefTableId>
+      <RefTableId>642153383</RefTableId>
       <RefTableName>DimLocations</RefTableName>
     </foreign-key>
-    <foreign-key id="5664" parent="5585" name="FK_FactRents_dim_property_type_id">
+    <foreign-key id="5683" parent="5586" name="FK_FactRents_dim_property_type_id">
       <ColNames>dim_property_type_id</ColNames>
-      <CreatedTimestamp>2023-03-17.01:58:08.010</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>1056058848</ObjectId>
+      <CreatedTimestamp>2023-03-17.12:46:45.397</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>834154067</ObjectId>
       <RefColNames>id</RefColNames>
-      <RefTableId>672057480</RefTableId>
+      <RefTableId>354152357</RefTableId>
       <RefTableName>DimPropertyType</RefTableName>
     </foreign-key>
-    <foreign-key id="5665" parent="5585" name="FK_FactRents_dim_room_type_id">
+    <foreign-key id="5684" parent="5586" name="FK_FactRents_dim_room_type_id">
       <ColNames>dim_room_type_id</ColNames>
-      <CreatedTimestamp>2023-03-17.01:58:08.010</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>1072058905</ObjectId>
+      <CreatedTimestamp>2023-03-17.12:46:45.397</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>850154124</ObjectId>
       <RefColNames>id</RefColNames>
-      <RefTableId>704057594</RefTableId>
+      <RefTableId>386152471</RefTableId>
       <RefTableName>DimRoomType</RefTableName>
     </foreign-key>
-    <index id="5666" parent="5585" name="PK_FactRents">
+    <foreign-key id="5685" parent="5586" name="FK_FactRents_dim_date_id">
+      <ColNames>dim_date_id</ColNames>
+      <CreatedTimestamp>2023-03-17.12:46:45.400</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.400</ModifiedTimestamp>
+      <ObjectId>866154181</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefTableId>674153497</RefTableId>
+      <RefTableName>DimDates</RefTableName>
+    </foreign-key>
+    <index id="5686" parent="5586" name="PK_FactRents">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5667" parent="5585" name="PK_FactRents">
-      <CreatedTimestamp>2023-03-17.01:58:08.010</CreatedTimestamp>
-      <ModifiedTimestamp>2023-03-17.01:58:08.010</ModifiedTimestamp>
-      <ObjectId>944058449</ObjectId>
+    <key id="5687" parent="5586" name="PK_FactRents">
+      <CreatedTimestamp>2023-03-17.12:46:45.397</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-17.12:46:45.397</ModifiedTimestamp>
+      <ObjectId>722153668</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_FactRents</UnderlyingIndexName>
     </key>
-    <column id="5668" parent="5586" name="listing_id">
+    <column id="5688" parent="5587" name="listing_id">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="5669" parent="5586" name="date">
+    <column id="5689" parent="5587" name="date">
       <DasType>varchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5670" parent="5587" name="host_id">
+    <column id="5690" parent="5588" name="host_id">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="5671" parent="5587" name="host_url">
+    <column id="5691" parent="5588" name="host_url">
       <DasType>varchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5672" parent="5587" name="host_name">
+    <column id="5692" parent="5588" name="host_name">
       <DasType>varchar(max)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5673" parent="5587" name="host_since">
+    <column id="5693" parent="5588" name="host_since">
       <DasType>varchar(max)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5674" parent="5587" name="host_location">
+    <column id="5694" parent="5588" name="host_location">
       <DasType>varchar(max)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5675" parent="5587" name="host_about">
+    <column id="5695" parent="5588" name="host_about">
       <DasType>varchar(max)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5676" parent="5587" name="host_response_time">
+    <column id="5696" parent="5588" name="host_response_time">
       <DasType>varchar(max)|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="5677" parent="5587" name="host_response_rate">
+    <column id="5697" parent="5588" name="host_response_rate">
       <DasType>float|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="5678" parent="5587" name="host_acceptance_rate">
+    <column id="5698" parent="5588" name="host_acceptance_rate">
       <DasType>float|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="5679" parent="5587" name="host_is_superhost">
+    <column id="5699" parent="5588" name="host_is_superhost">
       <DasType>int|0s</DasType>
       <Position>10</Position>
     </column>
-    <column id="5680" parent="5587" name="host_thumbnail_url">
+    <column id="5700" parent="5588" name="host_thumbnail_url">
       <DasType>varchar(max)|0s</DasType>
       <Position>11</Position>
     </column>
-    <column id="5681" parent="5587" name="host_picture_url">
+    <column id="5701" parent="5588" name="host_picture_url">
       <DasType>varchar(max)|0s</DasType>
       <Position>12</Position>
     </column>
-    <column id="5682" parent="5587" name="host_neighbourhood">
+    <column id="5702" parent="5588" name="host_neighbourhood">
       <DasType>varchar(max)|0s</DasType>
       <Position>13</Position>
     </column>
-    <column id="5683" parent="5587" name="host_listings_count">
+    <column id="5703" parent="5588" name="host_listings_count">
       <DasType>float|0s</DasType>
       <Position>14</Position>
     </column>
-    <column id="5684" parent="5587" name="host_total_listings_count">
+    <column id="5704" parent="5588" name="host_total_listings_count">
       <DasType>float|0s</DasType>
       <Position>15</Position>
     </column>
-    <column id="5685" parent="5587" name="host_verifications">
+    <column id="5705" parent="5588" name="host_verifications">
       <DasType>varchar(max)|0s</DasType>
       <Position>16</Position>
     </column>
-    <column id="5686" parent="5587" name="host_has_profile_pic">
+    <column id="5706" parent="5588" name="host_has_profile_pic">
       <DasType>int|0s</DasType>
       <Position>17</Position>
     </column>
-    <column id="5687" parent="5587" name="host_identity_verified">
+    <column id="5707" parent="5588" name="host_identity_verified">
       <DasType>int|0s</DasType>
       <Position>18</Position>
     </column>
-    <column id="5688" parent="5588" name="id">
+    <column id="5708" parent="5589" name="id">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="5689" parent="5588" name="listing_url">
+    <column id="5709" parent="5589" name="listing_url">
       <DasType>varchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5690" parent="5588" name="scrape_id">
+    <column id="5710" parent="5589" name="scrape_id">
       <DasType>bigint|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5691" parent="5588" name="last_scraped">
+    <column id="5711" parent="5589" name="last_scraped">
       <DasType>varchar(max)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5692" parent="5588" name="name">
+    <column id="5712" parent="5589" name="name">
       <DasType>varchar(max)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5693" parent="5588" name="summary">
+    <column id="5713" parent="5589" name="summary">
       <DasType>varchar(max)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5694" parent="5588" name="space">
+    <column id="5714" parent="5589" name="space">
       <DasType>varchar(max)|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="5695" parent="5588" name="description">
+    <column id="5715" parent="5589" name="description">
       <DasType>varchar(max)|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="5696" parent="5588" name="experiences_offered">
+    <column id="5716" parent="5589" name="experiences_offered">
       <DasType>varchar(max)|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="5697" parent="5588" name="neighborhood_overview">
+    <column id="5717" parent="5589" name="neighborhood_overview">
       <DasType>varchar(max)|0s</DasType>
       <Position>10</Position>
     </column>
-    <column id="5698" parent="5588" name="notes">
+    <column id="5718" parent="5589" name="notes">
       <DasType>varchar(max)|0s</DasType>
       <Position>11</Position>
     </column>
-    <column id="5699" parent="5588" name="transit">
+    <column id="5719" parent="5589" name="transit">
       <DasType>varchar(max)|0s</DasType>
       <Position>12</Position>
     </column>
-    <column id="5700" parent="5588" name="thumbnail_url">
+    <column id="5720" parent="5589" name="thumbnail_url">
       <DasType>varchar(max)|0s</DasType>
       <Position>13</Position>
     </column>
-    <column id="5701" parent="5588" name="medium_url">
+    <column id="5721" parent="5589" name="medium_url">
       <DasType>varchar(max)|0s</DasType>
       <Position>14</Position>
     </column>
-    <column id="5702" parent="5588" name="picture_url">
+    <column id="5722" parent="5589" name="picture_url">
       <DasType>varchar(max)|0s</DasType>
       <Position>15</Position>
     </column>
-    <column id="5703" parent="5588" name="xl_picture_url">
+    <column id="5723" parent="5589" name="xl_picture_url">
       <DasType>varchar(max)|0s</DasType>
       <Position>16</Position>
     </column>
-    <column id="5704" parent="5588" name="host_id">
+    <column id="5724" parent="5589" name="host_id">
       <DasType>bigint|0s</DasType>
       <Position>17</Position>
     </column>
-    <column id="5705" parent="5588" name="street">
+    <column id="5725" parent="5589" name="street">
       <DasType>varchar(max)|0s</DasType>
       <Position>18</Position>
     </column>
-    <column id="5706" parent="5588" name="neighbourhood">
+    <column id="5726" parent="5589" name="neighbourhood">
       <DasType>varchar(max)|0s</DasType>
       <Position>19</Position>
     </column>
-    <column id="5707" parent="5588" name="neighbourhood_cleansed">
+    <column id="5727" parent="5589" name="neighbourhood_cleansed">
       <DasType>varchar(max)|0s</DasType>
       <Position>20</Position>
     </column>
-    <column id="5708" parent="5588" name="neighbourhood_group_cleansed">
+    <column id="5728" parent="5589" name="neighbourhood_group_cleansed">
       <DasType>varchar(max)|0s</DasType>
       <Position>21</Position>
     </column>
-    <column id="5709" parent="5588" name="city">
+    <column id="5729" parent="5589" name="city">
       <DasType>varchar(max)|0s</DasType>
       <Position>22</Position>
     </column>
-    <column id="5710" parent="5588" name="state">
+    <column id="5730" parent="5589" name="state">
       <DasType>varchar(max)|0s</DasType>
       <Position>23</Position>
     </column>
-    <column id="5711" parent="5588" name="zipcode">
+    <column id="5731" parent="5589" name="zipcode">
       <DasType>varchar(max)|0s</DasType>
       <Position>24</Position>
     </column>
-    <column id="5712" parent="5588" name="market">
+    <column id="5732" parent="5589" name="market">
       <DasType>varchar(max)|0s</DasType>
       <Position>25</Position>
     </column>
-    <column id="5713" parent="5588" name="smart_location">
+    <column id="5733" parent="5589" name="smart_location">
       <DasType>varchar(max)|0s</DasType>
       <Position>26</Position>
     </column>
-    <column id="5714" parent="5588" name="country_code">
+    <column id="5734" parent="5589" name="country_code">
       <DasType>varchar(max)|0s</DasType>
       <Position>27</Position>
     </column>
-    <column id="5715" parent="5588" name="country">
+    <column id="5735" parent="5589" name="country">
       <DasType>varchar(max)|0s</DasType>
       <Position>28</Position>
     </column>
-    <column id="5716" parent="5588" name="latitude">
+    <column id="5736" parent="5589" name="latitude">
       <DasType>float|0s</DasType>
       <Position>29</Position>
     </column>
-    <column id="5717" parent="5588" name="longitude">
+    <column id="5737" parent="5589" name="longitude">
       <DasType>float|0s</DasType>
       <Position>30</Position>
     </column>
-    <column id="5718" parent="5588" name="is_location_exact">
+    <column id="5738" parent="5589" name="is_location_exact">
       <DasType>varchar(max)|0s</DasType>
       <Position>31</Position>
     </column>
-    <column id="5719" parent="5588" name="property_type">
+    <column id="5739" parent="5589" name="property_type">
       <DasType>varchar(max)|0s</DasType>
       <Position>32</Position>
     </column>
-    <column id="5720" parent="5588" name="room_type">
+    <column id="5740" parent="5589" name="room_type">
       <DasType>varchar(max)|0s</DasType>
       <Position>33</Position>
     </column>
-    <column id="5721" parent="5588" name="accommodates">
+    <column id="5741" parent="5589" name="accommodates">
       <DasType>bigint|0s</DasType>
       <Position>34</Position>
     </column>
-    <column id="5722" parent="5588" name="bathrooms">
+    <column id="5742" parent="5589" name="bathrooms">
       <DasType>float|0s</DasType>
       <Position>35</Position>
     </column>
-    <column id="5723" parent="5588" name="bedrooms">
+    <column id="5743" parent="5589" name="bedrooms">
       <DasType>float|0s</DasType>
       <Position>36</Position>
     </column>
-    <column id="5724" parent="5588" name="beds">
+    <column id="5744" parent="5589" name="beds">
       <DasType>float|0s</DasType>
       <Position>37</Position>
     </column>
-    <column id="5725" parent="5588" name="bed_type">
+    <column id="5745" parent="5589" name="bed_type">
       <DasType>varchar(max)|0s</DasType>
       <Position>38</Position>
     </column>
-    <column id="5726" parent="5588" name="amenities">
+    <column id="5746" parent="5589" name="amenities">
       <DasType>varchar(max)|0s</DasType>
       <Position>39</Position>
     </column>
-    <column id="5727" parent="5588" name="square_feet">
+    <column id="5747" parent="5589" name="square_feet">
       <DasType>float|0s</DasType>
       <Position>40</Position>
     </column>
-    <column id="5728" parent="5588" name="price">
+    <column id="5748" parent="5589" name="price">
       <DasType>float|0s</DasType>
       <Position>41</Position>
     </column>
-    <column id="5729" parent="5588" name="weekly_price">
+    <column id="5749" parent="5589" name="weekly_price">
       <DasType>float|0s</DasType>
       <Position>42</Position>
     </column>
-    <column id="5730" parent="5588" name="monthly_price">
+    <column id="5750" parent="5589" name="monthly_price">
       <DasType>float|0s</DasType>
       <Position>43</Position>
     </column>
-    <column id="5731" parent="5588" name="security_deposit">
+    <column id="5751" parent="5589" name="security_deposit">
       <DasType>float|0s</DasType>
       <Position>44</Position>
     </column>
-    <column id="5732" parent="5588" name="cleaning_fee">
+    <column id="5752" parent="5589" name="cleaning_fee">
       <DasType>float|0s</DasType>
       <Position>45</Position>
     </column>
-    <column id="5733" parent="5588" name="guests_included">
+    <column id="5753" parent="5589" name="guests_included">
       <DasType>bigint|0s</DasType>
       <Position>46</Position>
     </column>
-    <column id="5734" parent="5588" name="extra_people">
+    <column id="5754" parent="5589" name="extra_people">
       <DasType>float|0s</DasType>
       <Position>47</Position>
     </column>
-    <column id="5735" parent="5588" name="minimum_nights">
+    <column id="5755" parent="5589" name="minimum_nights">
       <DasType>bigint|0s</DasType>
       <Position>48</Position>
     </column>
-    <column id="5736" parent="5588" name="maximum_nights">
+    <column id="5756" parent="5589" name="maximum_nights">
       <DasType>bigint|0s</DasType>
       <Position>49</Position>
     </column>
-    <column id="5737" parent="5588" name="calendar_updated">
+    <column id="5757" parent="5589" name="calendar_updated">
       <DasType>varchar(max)|0s</DasType>
       <Position>50</Position>
     </column>
-    <column id="5738" parent="5588" name="has_availability">
+    <column id="5758" parent="5589" name="has_availability">
       <DasType>varchar(max)|0s</DasType>
       <Position>51</Position>
     </column>
-    <column id="5739" parent="5588" name="availability_30">
+    <column id="5759" parent="5589" name="availability_30">
       <DasType>bigint|0s</DasType>
       <Position>52</Position>
     </column>
-    <column id="5740" parent="5588" name="availability_60">
+    <column id="5760" parent="5589" name="availability_60">
       <DasType>bigint|0s</DasType>
       <Position>53</Position>
     </column>
-    <column id="5741" parent="5588" name="availability_90">
+    <column id="5761" parent="5589" name="availability_90">
       <DasType>bigint|0s</DasType>
       <Position>54</Position>
     </column>
-    <column id="5742" parent="5588" name="availability_365">
+    <column id="5762" parent="5589" name="availability_365">
       <DasType>bigint|0s</DasType>
       <Position>55</Position>
     </column>
-    <column id="5743" parent="5588" name="calendar_last_scraped">
+    <column id="5763" parent="5589" name="calendar_last_scraped">
       <DasType>varchar(max)|0s</DasType>
       <Position>56</Position>
     </column>
-    <column id="5744" parent="5588" name="number_of_reviews">
+    <column id="5764" parent="5589" name="number_of_reviews">
       <DasType>bigint|0s</DasType>
       <Position>57</Position>
     </column>
-    <column id="5745" parent="5588" name="first_review">
+    <column id="5765" parent="5589" name="first_review">
       <DasType>varchar(max)|0s</DasType>
       <Position>58</Position>
     </column>
-    <column id="5746" parent="5588" name="last_review">
+    <column id="5766" parent="5589" name="last_review">
       <DasType>varchar(max)|0s</DasType>
       <Position>59</Position>
     </column>
-    <column id="5747" parent="5588" name="review_scores_rating">
+    <column id="5767" parent="5589" name="review_scores_rating">
       <DasType>float|0s</DasType>
       <Position>60</Position>
     </column>
-    <column id="5748" parent="5588" name="review_scores_accuracy">
+    <column id="5768" parent="5589" name="review_scores_accuracy">
       <DasType>float|0s</DasType>
       <Position>61</Position>
     </column>
-    <column id="5749" parent="5588" name="review_scores_cleanliness">
+    <column id="5769" parent="5589" name="review_scores_cleanliness">
       <DasType>float|0s</DasType>
       <Position>62</Position>
     </column>
-    <column id="5750" parent="5588" name="review_scores_checkin">
+    <column id="5770" parent="5589" name="review_scores_checkin">
       <DasType>float|0s</DasType>
       <Position>63</Position>
     </column>
-    <column id="5751" parent="5588" name="review_scores_communication">
+    <column id="5771" parent="5589" name="review_scores_communication">
       <DasType>float|0s</DasType>
       <Position>64</Position>
     </column>
-    <column id="5752" parent="5588" name="review_scores_location">
+    <column id="5772" parent="5589" name="review_scores_location">
       <DasType>float|0s</DasType>
       <Position>65</Position>
     </column>
-    <column id="5753" parent="5588" name="review_scores_value">
+    <column id="5773" parent="5589" name="review_scores_value">
       <DasType>float|0s</DasType>
       <Position>66</Position>
     </column>
-    <column id="5754" parent="5588" name="requires_license">
+    <column id="5774" parent="5589" name="requires_license">
       <DasType>varchar(max)|0s</DasType>
       <Position>67</Position>
     </column>
-    <column id="5755" parent="5588" name="license">
+    <column id="5775" parent="5589" name="license">
       <DasType>float|0s</DasType>
       <Position>68</Position>
     </column>
-    <column id="5756" parent="5588" name="jurisdiction_names">
+    <column id="5776" parent="5589" name="jurisdiction_names">
       <DasType>varchar(max)|0s</DasType>
       <Position>69</Position>
     </column>
-    <column id="5757" parent="5588" name="instant_bookable">
+    <column id="5777" parent="5589" name="instant_bookable">
       <DasType>varchar(max)|0s</DasType>
       <Position>70</Position>
     </column>
-    <column id="5758" parent="5588" name="cancellation_policy">
+    <column id="5778" parent="5589" name="cancellation_policy">
       <DasType>varchar(max)|0s</DasType>
       <Position>71</Position>
     </column>
-    <column id="5759" parent="5588" name="require_guest_profile_picture">
+    <column id="5779" parent="5589" name="require_guest_profile_picture">
       <DasType>varchar(max)|0s</DasType>
       <Position>72</Position>
     </column>
-    <column id="5760" parent="5588" name="require_guest_phone_verification">
+    <column id="5780" parent="5589" name="require_guest_phone_verification">
       <DasType>varchar(max)|0s</DasType>
       <Position>73</Position>
     </column>
-    <column id="5761" parent="5588" name="calculated_host_listings_count">
+    <column id="5781" parent="5589" name="calculated_host_listings_count">
       <DasType>bigint|0s</DasType>
       <Position>74</Position>
     </column>
-    <column id="5762" parent="5588" name="reviews_per_month">
+    <column id="5782" parent="5589" name="reviews_per_month">
       <DasType>float|0s</DasType>
       <Position>75</Position>
     </column>
-    <argument id="5763" parent="5589">
+    <argument id="5783" parent="5590">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>int|0s</DasType>
     </argument>
-    <argument id="5764" parent="5590" name="@diagramname">
+    <argument id="5784" parent="5591" name="@diagramname">
       <DasType>sysname|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="5765" parent="5590" name="@owner_id">
+    <argument id="5785" parent="5591" name="@owner_id">
       <DasType>int|0s</DasType>
       <DefaultExpression>null</DefaultExpression>
       <Position>2</Position>
     </argument>
-    <argument id="5766" parent="5590" name="@version">
+    <argument id="5786" parent="5591" name="@version">
       <DasType>int|0s</DasType>
       <Position>3</Position>
     </argument>
-    <argument id="5767" parent="5590" name="@definition">
+    <argument id="5787" parent="5591" name="@definition">
       <DasType>varbinary(max)|0s</DasType>
       <Position>4</Position>
     </argument>
-    <argument id="5768" parent="5591" name="@diagramname">
+    <argument id="5788" parent="5592" name="@diagramname">
       <DasType>sysname|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="5769" parent="5591" name="@owner_id">
+    <argument id="5789" parent="5592" name="@owner_id">
       <DasType>int|0s</DasType>
       <DefaultExpression>null</DefaultExpression>
       <Position>2</Position>
     </argument>
-    <argument id="5770" parent="5591" name="@version">
+    <argument id="5790" parent="5592" name="@version">
       <DasType>int|0s</DasType>
       <Position>3</Position>
     </argument>
-    <argument id="5771" parent="5591" name="@definition">
+    <argument id="5791" parent="5592" name="@definition">
       <DasType>varbinary(max)|0s</DasType>
       <Position>4</Position>
     </argument>
-    <argument id="5772" parent="5592" name="@diagramname">
+    <argument id="5792" parent="5593" name="@diagramname">
       <DasType>sysname|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="5773" parent="5592" name="@owner_id">
+    <argument id="5793" parent="5593" name="@owner_id">
       <DasType>int|0s</DasType>
       <DefaultExpression>null</DefaultExpression>
       <Position>2</Position>
     </argument>
-    <argument id="5774" parent="5593" name="@diagramname">
+    <argument id="5794" parent="5594" name="@diagramname">
       <DasType>sysname|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="5775" parent="5593" name="@owner_id">
+    <argument id="5795" parent="5594" name="@owner_id">
       <DasType>int|0s</DasType>
       <DefaultExpression>null</DefaultExpression>
       <Position>2</Position>
     </argument>
-    <argument id="5776" parent="5594" name="@diagramname">
+    <argument id="5796" parent="5595" name="@diagramname">
       <DasType>sysname|0s</DasType>
       <DefaultExpression>NULL</DefaultExpression>
       <Position>1</Position>
     </argument>
-    <argument id="5777" parent="5594" name="@owner_id">
+    <argument id="5797" parent="5595" name="@owner_id">
       <DasType>int|0s</DasType>
       <DefaultExpression>NULL</DefaultExpression>
       <Position>2</Position>
     </argument>
-    <argument id="5778" parent="5595" name="@diagramname">
+    <argument id="5798" parent="5596" name="@diagramname">
       <DasType>sysname|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="5779" parent="5595" name="@owner_id">
+    <argument id="5799" parent="5596" name="@owner_id">
       <DasType>int|0s</DasType>
       <DefaultExpression>null</DefaultExpression>
       <Position>2</Position>
     </argument>
-    <argument id="5780" parent="5595" name="@new_diagramname">
+    <argument id="5800" parent="5596" name="@new_diagramname">
       <DasType>sysname|0s</DasType>
       <Position>3</Position>
     </argument>
-    <column id="5781" parent="5597" name="name">
+    <column id="5801" parent="5598" name="name">
       <DasType>sysname|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5782" parent="5597" name="principal_id">
+    <column id="5802" parent="5598" name="principal_id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5783" parent="5597" name="diagram_id">
+    <column id="5803" parent="5598" name="diagram_id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5784" parent="5597" name="version">
+    <column id="5804" parent="5598" name="version">
       <DasType>int|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5785" parent="5597" name="definition">
+    <column id="5805" parent="5598" name="definition">
       <DasType>varbinary(max)|0s</DasType>
       <Position>5</Position>
     </column>
-    <index id="5786" parent="5597" name="PK__sysdiagr__C2B05B61F127D4CA">
+    <index id="5806" parent="5598" name="PK__sysdiagr__C2B05B61F127D4CA">
       <Clustering>1</Clustering>
       <ColNames>diagram_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5787" parent="5597" name="UK_principal_name">
+    <index id="5807" parent="5598" name="UK_principal_name">
       <ColNames>principal_id
 name</ColNames>
       <Position>2</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5788" parent="5597" name="PK__sysdiagr__C2B05B61F127D4CA">
+    <key id="5808" parent="5598" name="PK__sysdiagr__C2B05B61F127D4CA">
       <CreatedTimestamp>2023-03-14.21:29:45.980</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-14.21:29:45.980</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -17921,7 +18034,7 @@ name</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK__sysdiagr__C2B05B61F127D4CA</UnderlyingIndexName>
     </key>
-    <key id="5789" parent="5597" name="UK_principal_name">
+    <key id="5809" parent="5598" name="UK_principal_name">
       <CreatedTimestamp>2023-03-14.21:29:45.983</CreatedTimestamp>
       <ModifiedTimestamp>2023-03-14.21:29:45.983</ModifiedTimestamp>
       <ObjectId>1947153982</ObjectId>

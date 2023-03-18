@@ -48,7 +48,6 @@ def load_to_stage():
 
     hosts = hosts.drop_duplicates()
 
-
     hosts.to_sql(name="HostsStage", con=engine, if_exists='replace',
                  index=False,
                  schema='airbnb_stage'
@@ -84,6 +83,7 @@ def clear_hosts(hosts: pd.DataFrame):
 def transform():
     transform_hosts()
     transform_listings()
+    load_dates()
     load_fact_table()
 
 
@@ -108,10 +108,8 @@ def transform_listings():
     load_dim_location()
 
 
-
 def transform_and_load_dim_apartment():
-
-    drop_constraints()
+    drop_tables()
 
     prepare_tables_apartment_dim()
 
@@ -120,8 +118,6 @@ def transform_and_load_dim_apartment():
     load_apartment_dim()
 
     load_listings()
-
-
 
 
 def prepare_tables_apartment_dim():
@@ -184,9 +180,16 @@ def load_listings():
                                    number_of_reviews float,
                                    review_scores_rating float,
                                    require_guest_profile_picture bit,
+                                   start_date datetime DEFAULT GETDATE(),
+                                   end_date datetime,
+                                   prev_record_id bigint
+                                   
                                    
                                    CONSTRAINT PK_DimListings PRIMARY KEY (id)
                                );
+                               ALTER TABLE airbnb.DimListings 
+                                ADD CONSTRAINT FK_DimListings_prev_record_id
+                                 FOREIGN KEY(id) REFERENCES airbnb.DimListings(id);
             '''))
 
             conn.execute(text('''
@@ -217,6 +220,29 @@ def load_listings():
         print(e)
 
 
+def load_dates():
+    try:
+        with engine.connect() as conn:
+            conn.execute(text('''
+            CREATE TABLE  airbnb.DimDates (
+                id bigint identity(1, 1),
+                day int,
+                month int,
+                year int
+                
+                CONSTRAINT PK_DimDates PRIMARY KEY (id)
+            )
+            '''))
+            conn.commit()
+    except Exception as e:
+        print(e)
+
+    dates = pd.Series(pd.date_range('2016-01-01', '2020-01-01', freq='D'))
+    dates_df = pd.DataFrame({'day': dates.dt.day, 'month': dates.dt.month, 'year': dates.dt.year})
+
+    dates_df.to_sql(name="DimDates", con=engine, if_exists='append', schema='airbnb', index=False)
+
+
 def load_fact_table():
     try:
         with engine.connect() as conn:
@@ -232,7 +258,9 @@ def load_fact_table():
                     dim_listings_id            bigint,
                     dim_locations_id           bigint,
                     dim_property_type_id       bigint,
-                    dim_room_type_id           bigint
+                    dim_room_type_id           bigint,
+                    dim_date_id                bigint,
+                    price                      money
                 
                     CONSTRAINT PK_FactRents PRIMARY KEY (id),
                     CONSTRAINT FK_FactRents_dim_apartment_id FOREIGN KEY (dim_apartment_id) REFERENCES airbnb.DimApartments (id),
@@ -242,15 +270,16 @@ def load_fact_table():
                     CONSTRAINT FK_FactRents_dim_listings_id FOREIGN KEY (dim_listings_id) REFERENCES airbnb.DimListings (id),
                     CONSTRAINT FK_FactRents_dim_locations_id FOREIGN KEY (dim_locations_id) REFERENCES airbnb.DimLocations(id),
                     CONSTRAINT FK_FactRents_dim_property_type_id FOREIGN KEY (dim_property_type_id) REFERENCES airbnb.DimPropertyType (id),
-                    CONSTRAINT FK_FactRents_dim_room_type_id FOREIGN KEY (dim_room_type_id) REFERENCES airbnb.DimRoomType (id)
+                    CONSTRAINT FK_FactRents_dim_room_type_id FOREIGN KEY (dim_room_type_id) REFERENCES airbnb.DimRoomType (id),
+                    CONSTRAINT FK_FactRents_dim_date_id FOREIGN KEY (dim_date_id) REFERENCES airbnb.DimDates (id)
                 );
             '''))
 
             conn.execute(text('''
                 
                 INSERT INTO airbnb.FactRents (dim_apartment_id, dim_host_id, dim_hosts_neighbourhood_id, dim_response_time_id,
-                                              dim_listings_id, dim_locations_id, dim_property_type_id, dim_room_type_id)
-                SELECT DISTINCT
+                                              dim_listings_id, dim_locations_id, dim_property_type_id, dim_room_type_id, dim_date_id, price)
+                SELECT
                     DA.id,
                     HS.host_id,
                     DHN.id,
@@ -258,11 +287,13 @@ def load_fact_table():
                     LS.id,
                     DL.id,
                     DPT.id,
-                    DROOMT.id
+                    DROOMT.id,
+                    D.id,
+                    LS.price
                 FROM airbnb_stage.CalendarStage
                          INNER JOIN airbnb_stage.ListingStage AS LS ON LS.id = airbnb_stage.CalendarStage.listing_id
                          LEFT JOIN airbnb_stage.HostsStage AS HS ON HS.host_id = LS.host_id
-                         INNER join airbnb.DimApartments AS DA
+                         LEFT join airbnb.DimApartments AS DA
                                    ON
                                             ( DA.accommodates = LS.accommodates OR (DA.accommodates IS NULL AND LS.accommodates IS NULL)) AND
                                             ( DA.bathrooms = LS.bathrooms OR (DA.bathrooms IS NULL AND LS.bathrooms IS NULL)) AND
@@ -275,6 +306,7 @@ def load_fact_table():
                          LEFT JOIN airbnb.DimLocations AS DL
                                    ON DL.latitude = LS.latitude AND DL.longitude = LS.longitude
                          LEFT JOIN airbnb.DimRoomType AS DROOMT ON DROOMT.room_type = LS.room_type
+                         LEFT JOIN airbnb.DimDates AS D ON DATEFROMPARTS(year, month,  day) = CONVERT(date, airbnb_stage.CalendarStage.date, 23)
             '''))
 
             conn.commit()
@@ -282,12 +314,13 @@ def load_fact_table():
         print(e)
 
 
-def drop_constraints():
+def drop_tables():
     try:
         with engine.connect() as conn:
 
             conn.execute(text('''
                             DROP TABLE IF EXISTS airbnb.FactRents;
+                            DROP TABLE IF EXISTS airbnb.DimDates;
                             DROP TABLE IF EXISTS airbnb.DimApartments;
                             DROP TABLE IF EXISTS airbnb.DimHosts;
                             DROP TABLE IF EXISTS airbnb.DimHostsNeighbourhood;
@@ -400,19 +433,26 @@ def prepare_tables_hosts_dim():
                     host_acceptance_rate float,
                     host_is_superhost bit,
                     host_has_profile_pic bit,
-                    host_identity_verified bit
+                    host_identity_verified bit,
+                    start_date datetime DEFAULT GETDATE(),
+                    end_date datetime,
+                    prev_record_id bigint,
                     
                     CONSTRAINT PK_DimHosts PRIMARY KEY(id)
                 );
+                
+                ALTER TABLE airbnb.DimHosts 
+                ADD CONSTRAINT FK_DimHosts_prev_record_id
+                 FOREIGN KEY(id) REFERENCES airbnb.DimHosts(id);
             ''')
             conn.execute(query)
+
             conn.commit()
     except Exception as e:
         print(e)
 
 
 def load_dim_hosts():
-
     try:
         with engine.connect() as conn:
             conn.execute(text('''
@@ -459,6 +499,7 @@ def run():
     load()
 
     engine.dispose()
+
 
 if __name__ == '__main__':
     run()
